@@ -2,15 +2,15 @@
 
 ** Final test for Coursera Getting and Cleaning Data Course **
 
-There is just one script called "run_analysis.R" that performs all the requests.
-The file is commented in order to specify which commands are necessary to answr one of the four questions.
-The final requests are simply called
+There is just one script called "run_analysis.R" that performs all the Tasks.
+The file is commented in order to specify which commands are necessary to answer one of the four questions.
+The final outputs are:
 
 df : the datasest that merges test and traing data
 df1: the average datasest with regard the average vs "subject" and "activity"
 
 
-PS : I considered experiemnatl variables the following:
+PS : I considered experimental variables the following:
 
 1) body_acc_x 
 2) body_acc_y
@@ -22,5 +22,5 @@ PS : I considered experiemnatl variables the following:
 8) total_acc_y
 9) total_acc_z
 
-the variable X is considered derived from the previous and is included only in the global dataset (df)
+the variable X is considered derived from the previous ones and is included only in the global dataset (df)
 and not in the average dataset (df1)
