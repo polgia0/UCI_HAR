@@ -1,4 +1,4 @@
-#Data Source
+# Data Source
 
 Data:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
@@ -9,7 +9,9 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 Data stored in repository under directory: **UCI HAR Dataset**
 The data directory is created at the beginning after data download.
 
-#Raw variables
+# Raw variables
+
+Classification Variables:
 
 * **subject** : taken from files *subject_test.txt* and *subject_train.txt*
 * **activity**: taken from files *y_test.txt* and *y_train.txt*
@@ -18,13 +20,13 @@ Measurements Variables:
 
 * **561 variables** with names in *features.txt* and values in files: *X_test.txt* and *X_train.txt*
 
-* **9  variables** with names : *body_acc_x, body_acc_y, body_acc_z, body_gyro_x, body_gyro_y, body_gyro_z, total_acc_x, total_acc_y, total_acc_z* located in single file in *Internal Signals* directories
+* **9  variables** with names : *body_acc_x, body_acc_y, body_acc_z, body_gyro_x, body_gyro_y, body_gyro_z, total_acc_x, total_acc_y, total_acc_z* located in single files in *Internal Signals* directories
     
-#Complete DataSet
+# Complete DataSet
 
 **df**  achieved by row-wise merging test and train set, dimension: 10299 obs. of 175 variables
 
-#Extracted Dataset with only meand and sds
+# Extracted Dataset with only mean and std
 
 **df1** achieved by selection variables with "-mean()" or "-std()" in the name, dimension: 10299 of 68 variables. Then:
     
@@ -56,7 +58,7 @@ average values and standard deviation end with "_mean" and "_std" ends.
 *subject* is the number of observation 
 *activity* is a factor with its letteral definition
 
-#Second Independent Dataset 
+# Second Independent Dataset 
 
 **df2** build with pipeline of dplyr has in the first two columns (subject activity) all the possible combinations the levels and the other variables are averaged in each combination sebset. Dimension 180 combinations of 69 variables (*count* variable is not requested but it is added to control that the average is valid)
 
