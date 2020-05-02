@@ -2,25 +2,11 @@
 
 ** Final test for Coursera Getting and Cleaning Data Course **
 
-There is just one script called "run_analysis.R" that performs all the Tasks.
-The file is commented in order to specify which commands are necessary to answer one of the four questions.
-The final outputs are:
 
-df : the datasest that merges test and traing data
-df1: the average datasest with regard the average vs "subject" and "activity"
+1) raw data are downloaded and and unzip in a sub directory called "UCI HAR Dataset"
 
+2) test and train datasets are read from the directory and subdirectory and merged in a single data.frame df (assignement of Task1). All the original variables are collected and ordered.
 
-PS : I considered experimental variables the following:
+3) a second data.frame (df1) is created by extracting only the variables that measure mean and average by a name selection. Then the activity of the is changed from numeral to literal description and the variable name is simplyfied and ordered. This covers Task 2 and 3
 
-1) body_acc_x 
-2) body_acc_y
-3) body_acc_z
-4) body_gyro_x
-5) body_gyro_y
-6) body_gyro_z
-7) total_acc_x
-8) total_acc_y
-9) total_acc_z
-
-the variable X is considered derived from the previous ones and is included only in the global dataset (df)
-and not in the average dataset (df1)
+4) by using a dplyr pipeline a new data.frame (df2) is build by the previous one. The process group and summarize by average all the variables vs the possible combination of subject and activity 
